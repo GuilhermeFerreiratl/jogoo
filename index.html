@@ -3,41 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gerador Lotofácil 16 Números - Com Painel de Acertos</title>
+    <title>Gerador Lotofácil 16 Números Final</title>
     <style>
         :root { --primary: #930089; --secondary: #62005b; --bg: #f4f6f9; --card: #fff; }
         body { font-family: 'Segoe UI', sans-serif; background: var(--bg); margin: 0; padding: 20px; }
- .container { max-width: 1350px; margin: 0 auto; }
+.container { max-width: 1350px; margin: 0 auto; }
         header { text-align: center; margin-bottom: 20px; }
         header h1 { color: var(--primary); margin: 0; }
- .grid { display: grid; grid-template-columns: 360px 1fr; gap: 20px; }
+.grid { display: grid; grid-template-columns: 360px 1fr; gap: 20px; }
         @media (max-width: 950px) {.grid { grid-template-columns: 1fr; } }
- .card { background: var(--card); padding: 18px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); margin-bottom: 15px; }
- .card h2 { font-size: 1.1rem; color: var(--primary); margin: 0 0 10px 0; border-bottom: 2px solid var(--bg); padding-bottom: 8px; }
- .filtro { border: 1px solid #ddd; padding: 10px; border-radius: 6px; margin-bottom: 12px; background: #fafafa; }
- .filtro h3 { margin: 0 0 8px 0; font-size: 0.95rem; color: var(--secondary); }
+.card { background: var(--card); padding: 18px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); margin-bottom: 15px; }
+.card h2 { font-size: 1.1rem; color: var(--primary); margin: 0 0 10px 0; border-bottom: 2px solid var(--bg); padding-bottom: 8px; }
+.filtro { border: 1px solid #ddd; padding: 10px; border-radius: 6px; margin-bottom: 12px; background: #fafafa; }
+.filtro h3 { margin: 0 0 8px 0; font-size: 0.95rem; color: var(--secondary); }
         label { font-size: 0.8rem; font-weight: 600; display: block; margin-bottom: 4px; }
         input[type="text"], input[type="number"] { width: 100%; padding: 7px; box-sizing: border-box; border: 1px solid #ccc; border-radius: 4px; }
- .row { display: flex; gap: 5px; }
- .row input { width: 50%; }
+.row { display: flex; gap: 5px; }
+.row input { width: 50%; }
         button { background: var(--primary); color: white; border: none; padding: 12px; border-radius: 4px; cursor: pointer; font-weight: bold; width: 100%; }
         button:hover { background: var(--secondary); }
- .game-list { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 8px; max-height: 600px; overflow-y: auto; }
- .game { background: #fff; border: 1px solid #e0e0e0; padding: 8px; border-radius: 6px; }
- .balls { display: flex; flex-wrap: wrap; gap: 3px; margin-bottom: 4px; }
- .ball { width: 23px; height: 23px; background: var(--primary); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.7rem; font-weight: bold; }
- .info { font-size: 0.65rem; color: #333; border-top: 1px dashed #eee; padding-top: 3px; }
- .pagination { display: flex; justify-content: center; gap: 10px; margin-top: 15px; align-items: center; }
- .pagination button { width: auto; padding: 6px 12px; }
+.game-list { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 8px; max-height: 600px; overflow-y: auto; }
+.game { background: #fff; border: 1px solid #e0e0e0; padding: 8px; border-radius: 6px; }
+.balls { display: flex; flex-wrap: wrap; gap: 3px; margin-bottom: 4px; }
+.ball { width: 23px; height: 23px; background: var(--primary); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.7rem; font-weight: bold; }
+.info { font-size: 0.65rem; color: #333; border-top: 1px dashed #eee; padding-top: 3px; }
+.pagination { display: flex; justify-content: center; gap: 10px; margin-top: 15px; align-items: center; }
+.pagination button { width: auto; padding: 6px 12px; }
         #loading { text-align: center; font-weight: bold; color: var(--primary); }
-  #painelAcertos { display: grid; grid-template-columns: 1fr 1fr; gap: 5px; margin-top: 10px; font-size: 0.85rem; }
- .acerto-item { background: #eee; padding: 5px; border-radius: 4px; text-align: center; font-weight: 600; }
- .acerto-item span { color: var(--primary); font-size: 1rem; }
+#painelAcertos { display: grid; grid-template-columns: 1fr 1fr; gap: 5px; margin-top: 10px; font-size: 0.85rem; }
+.acerto-item { background: #eee; padding: 5px; border-radius: 4px; text-align: center; font-weight: 600; }
+.acerto-item span { color: var(--primary); font-size: 1rem; }
+.soma-geral-box { border: 2px solid var(--primary); padding: 10px; border-radius: 6px; margin-top: 15px; background: #f9e6f8; }
     </style>
 </head>
 <body>
 <div class="container">
-    <header><h1>Gerador Lotofácil 16 Dezenas</h1><p>Bloqueia sequência 5+ | Soma = Soma dos 16 números</p></header>
+    <header><h1>Gerador Lotofácil 16 Dezenas</h1><p>Bloqueia sequência 5+</p></header>
 
     <div class="grid">
         <!-- COLUNA FILTROS -->
@@ -53,7 +54,6 @@
                         <label>Pares Rep Mín-Máx:</label><div class="row"><input type="number" id="f1_pmin" value="2"><input type="number" id="f1_pmax" value="8"></div>
                         <label>Ímpares Rep Mín-Máx:</label><div class="row"><input type="number" id="f1_imin" value="3"><input type="number" id="f1_imax" value="9"></div>
                         <label>Primos Rep Mín-Máx:</label><div class="row"><input type="number" id="f1_prmin" value="2"><input type="number" id="f1_prmax" value="7"></div>
-                        <label>Soma Geral do Jogo Mín-Máx:</label><div class="row"><input type="number" id="f1_smin" value="185"><input type="number" id="f1_smax" value="225"></div>
                     </div>
                     <!-- FILTRO 2 -->
                     <div class="filtro">
@@ -62,7 +62,6 @@
                         <label>Pares Rep Mín-Máx:</label><div class="row"><input type="number" id="f2_pmin" value="0"><input type="number" id="f2_pmax" value="15"></div>
                         <label>Ímpares Rep Mín-Máx:</label><div class="row"><input type="number" id="f2_imin" value="0"><input type="number" id="f2_imax" value="15"></div>
                         <label>Primos Rep Mín-Máx:</label><div class="row"><input type="number" id="f2_prmin" value="0"><input type="number" id="f2_prmax" value="15"></div>
-                        <label>Soma Geral do Jogo Mín-Máx:</label><div class="row"><input type="number" id="f2_smin" value="0"><input type="number" id="f2_smax" value="500"></div>
                     </div>
                     <!-- FILTRO 3 -->
                     <div class="filtro">
@@ -71,16 +70,23 @@
                         <label>Pares Rep Mín-Máx:</label><div class="row"><input type="number" id="f3_pmin" value="0"><input type="number" id="f3_pmax" value="15"></div>
                         <label>Ímpares Rep Mín-Máx:</label><div class="row"><input type="number" id="f3_imin" value="0"><input type="number" id="f3_imax" value="15"></div>
                         <label>Primos Rep Mín-Máx:</label><div class="row"><input type="number" id="f3_prmin" value="0"><input type="number" id="f3_prmax" value="15"></div>
-                        <label>Soma Geral do Jogo Mín-Máx:</label><div class="row"><input type="number" id="f3_smin" value="0"><input type="number" id="f3_smax" value="500"></div>
                     </div>
                 </div>
-                <button onclick="aplicarFiltros()">Gerar e Filtrar</button>
+
+                <!-- SOMA GERAL UNICA -->
+                <div class="soma-geral-box">
+                    <h3 style="margin:0 0 8px 0; color:var(--primary); font-size:1rem;">Filtro Soma Geral do Jogo</h3>
+                    <label>Soma dos 16 números Mín-Máx:</label>
+                    <div class="row"><input type="number" id="somaGeralMin" value="185"><input type="number" id="somaGeralMax" value="225"></div>
+                </div>
+
+                <button onclick="aplicarFiltros()" style="margin-top:10px;">Gerar e Filtrar</button>
             </div>
 
             <!-- ABA CONFERIR -->
             <div class="card">
                 <h2>🔍 Conferir 15 Dezenas</h2>
-                <label>Coloque 15 dezenas para ver quantas batem em cada jogo:</label>
+                <label>Coloque 15 dezenas para ver a distribuição:</label>
                 <input type="text" id="conferirDez" placeholder="Ex: 1,3,5,7,9,11,13,15,17,19,21,23,25,2,4">
                 <button onclick="aplicarConferencia()" style="margin-top:8px; background:#444;">Aplicar Conferência</button>
 
@@ -150,13 +156,13 @@
 
     function parse(id){ return document.getElementById(id).value.split(/[\s,;]+/).map(Number).filter(n=>n>=1&&n<=25); }
 
-    function testarFiltro(jogo, dezenas, somaGeral){
-        if(dezenas.length===0) return {passa:true, p:'-', i:'-', pr:'-', s:somaGeral};
+    function testarFiltro(jogo, dezenas){
+        if(dezenas.length===0) return {passa:true, p:'-', i:'-', pr:'-'};
         let rep = jogo.filter(n=>dezenas.includes(n));
         let p = rep.filter(n=>n%2===0).length;
         let i = rep.filter(n=>n%2!==0).length;
         let pr = rep.filter(n=>primos.includes(n)).length;
-        return {passa:true, p,i,pr,s:somaGeral};
+        return {passa:true, p,i,pr};
     }
 
     function aplicarFiltros(){
@@ -165,20 +171,22 @@
         document.getElementById('loading').style.display='block';
         setTimeout(()=>{
             let f1=parse('f1_dez'), f2=parse('f2_dez'), f3=parse('f3_dez');
+            let somaMin = +somaGeralMin.value, somaMax = +somaGeralMax.value;
             jogosFiltrados = [];
 
             for(let obj of todosJogos){
                 let jogo = obj.numeros;
                 let somaGeral = obj.soma;
                 if(temSequencia5(jogo)) continue;
+                if(somaGeral < somaMin || somaGeral > somaMax) continue; // FILTRO SOMA GERAL UNICO
 
-                let t1 = testarFiltro(jogo,f1,somaGeral);
-                let t2 = testarFiltro(jogo,f2,somaGeral);
-                let t3 = testarFiltro(jogo,f3,somaGeral);
+                let t1 = testarFiltro(jogo,f1);
+                let t2 = testarFiltro(jogo,f2);
+                let t3 = testarFiltro(jogo,f3);
 
-                let passa1 = f1.length===0 || (t1.p>=+f1_pmin.value && t1.p<=+f1_pmax.value && t1.i>=+f1_imin.value && t1.i<=+f1_imax.value && t1.pr>=+f1_prmin.value && t1.pr<=+f1_prmax.value && somaGeral>=+f1_smin.value && somaGeral<=+f1_smax.value);
-                let passa2 = f2.length===0 || (t2.p>=+f2_pmin.value && t2.p<=+f2_pmax.value && t2.i>=+f2_imin.value && t2.i<=+f2_imax.value && t2.pr>=+f2_prmin.value && t2.pr<=+f2_prmax.value && somaGeral>=+f2_smin.value && somaGeral<=+f2_smax.value);
-                let passa3 = f3.length===0 || (t3.p>=+f3_pmin.value && t3.p<=+f3_pmax.value && t3.i>=+f3_imin.value && t3.i<=+f3_imax.value && t3.pr>=+f3_prmin.value && t3.pr<=+f3_prmax.value && somaGeral>=+f3_smin.value && somaGeral<=+f3_smax.value);
+                let passa1 = f1.length===0 || (t1.p>=+f1_pmin.value && t1.p<=+f1_pmax.value && t1.i>=+f1_imin.value && t1.i<=+f1_imax.value && t1.pr>=+f1_prmin.value && t1.pr<=+f1_prmax.value);
+                let passa2 = f2.length===0 || (t2.p>=+f2_pmin.value && t2.p<=+f2_pmax.value && t2.i>=+f2_imin.value && t2.i<=+f2_imax.value && t2.pr>=+f2_prmin.value && t2.pr<=+f2_prmax.value);
+                let passa3 = f3.length===0 || (t3.p>=+f3_pmin.value && t3.p<=+f3_pmax.value && t3.i>=+f3_imin.value && t3.i<=+f3_imax.value && t3.pr>=+f3_prmin.value && t3.pr<=+f3_prmax.value);
 
                 if(passa1 && passa2 && passa3){
                     let paresTot = jogo.filter(n=>n%2===0).length;
@@ -196,11 +204,11 @@
         if(dezenasConferencia.length===0) return alert("Coloque 15 dezenas");
         modoConferencia = true;
 
-        // ZERA E CONTA OS ACERTOS
-        contagemAcertos = {11:0, 12:0, 13:0, 14:0, 15:0, 16:0};
+        // CONTA SÓ 11 A 15
+        contagemAcertos = {11:0, 12:0, 13:0, 14:0, 15:0};
         for(let obj of jogosFiltrados){
             let batem = obj.jogo.filter(n=>dezenasConferencia.includes(n)).length;
-            if(batem >= 11 && batem <= 16){
+            if(batem >= 11 && batem <= 15){
                 contagemAcertos[batem]++;
             }
         }
@@ -210,8 +218,8 @@
 
     function renderPainel(){
         let painel = document.getElementById('painelAcertos');
-        painel.innerHTML = '<h3 style="grid-column:1/3; margin:5px 0 0 0; font-size:0.9rem; color:var(--secondary);">Distribuição de Acertos:</h3>';
-        for(let i=11; i<=16; i++){
+        painel.innerHTML = '<h3 style="grid-column:1/3; margin:5px 0 0 0; font-size:0.9rem; color:var(--secondary);">Distribuição de Acertos 11 a 15:</h3>';
+        for(let i=11; i<=15; i++){
             painel.innerHTML += `<div class="acerto-item">${i} acertos: <span>${contagemAcertos[i].toLocaleString('pt-BR')}</span></div>`;
         }
     }
@@ -231,16 +239,10 @@
             let div = document.createElement('div'); div.className='game';
             let balls = obj.jogo.map(n=>`<div class="ball">${String(n).padStart(2,'0')}</div>`).join('');
 
-            let confTxt = '';
-            if(modoConferencia){
-                let batem = obj.jogo.filter(n=>dezenasConferencia.includes(n)).length;
-                confTxt = ` | Batem c/15: <b>${batem}</b>`;
-            }
-
             div.innerHTML = `
                 <div class="balls">${balls}</div>
                 <div class="info">
-                    Soma:${obj.somaGeral} | Total: P${obj.paresTot} I${obj.imparesTot} Pr${obj.primosTot} ${confTxt}<br>
+                    Soma:${obj.somaGeral} | Total: P${obj.paresTot} I${obj.imparesTot} Pr${obj.primosTot}<br>
                     F1:P${obj.t1.p} I${obj.t1.i} Pr${obj.t1.pr} |
                     F2:P${obj.t2.p} I${obj.t2.i} Pr${obj.t2.pr} |
                     F3:P${obj.t3.p} I${obj.t3.i} Pr${obj.t3.pr}
