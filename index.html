@@ -38,7 +38,7 @@
 </head>
 <body>
 <div class="container">
-    <header><h1>Gerador Lotofácil 16 Dezenas</h1><p>Bloqueia sequência 5+</p></header>
+    <header><h1>Gerador Lotofácil 16 Dezenas</h1><p>Bloqueia sequência 6+</p></header>
 
     <div class="grid">
         <!-- COLUNA FILTROS -->
@@ -138,10 +138,10 @@
         return res;
     }
 
-    function temSequencia5(numeros) {
+    function temSequencia6(numeros) {
         let seq = 1;
         for(let i=1; i<numeros.length; i++){
-            if(numeros[i] === numeros[i-1]+1){ seq++; if(seq>=5) return true; }
+            if(numeros[i] === numeros[i-1]+1){ seq++; if(seq>=6) return true; }
             else seq = 1;
         }
         return false;
