@@ -138,10 +138,10 @@
         return res;
     }
 
-    function temSequencia6(numeros) {
+    function temSequencia5(numeros) {
         let seq = 1;
         for(let i=1; i<numeros.length; i++){
-            if(numeros[i] === numeros[i-1]+1){ seq++; if(seq>=6) return true; }
+            if(numeros[i] === numeros[i-1]+1){ seq++; if(seq>=5) return true; }
             else seq = 1;
         }
         return false;
@@ -183,7 +183,7 @@
             for(let obj of todosJogos){
                 let jogo = obj.numeros;
 
-                if(temSequencia6(jogo)) continue;
+                if(temSequencia5(jogo)) continue;
                 // FILTROS GERAIS
                 if(obj.soma < somaMin || obj.soma > somaMax) continue;
                 if(obj.paresTot < parMin || obj.paresTot > parMax) continue;
