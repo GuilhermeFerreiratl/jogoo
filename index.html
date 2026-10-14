@@ -38,7 +38,7 @@
 </head>
 <body>
 <div class="container">
-    <header><h1>Gerador Lotofácil 16 Dezenas</h1><p>Bloqueia sequência 6+</p></header>
+    <header><h1>Gerador Lotofácil 16 Dezenas</h1><p>Bloqueia sequência 5+</p></header>
 
     <div class="grid">
         <!-- COLUNA FILTROS -->
@@ -183,7 +183,7 @@
             for(let obj of todosJogos){
                 let jogo = obj.numeros;
 
-                if(temSequencia5(jogo)) continue;
+                if(temSequencia6(jogo)) continue;
                 // FILTROS GERAIS
                 if(obj.soma < somaMin || obj.soma > somaMax) continue;
                 if(obj.paresTot < parMin || obj.paresTot > parMax) continue;
